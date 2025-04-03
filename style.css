@@ -575,10 +575,16 @@ html {
   .review-count {
     font-size: 12px;
   }
-  .iphone_container .slide0,
+  .iphone_container .slide0 {
+    left: 50%;
+    width: 316px;
+  }
+
   .iphone_container .slide1,
   .iphone_container .slide2,
   .iphone_container .slide3 {
+    width: 280px;
+    height: auto;
     left: 50%;
   }
 
@@ -591,23 +597,28 @@ html {
   .iphone_container .btn1 {
     position: relative;
     top: -80%;
+    font-size: 16px;
+    padding: 10px 16px;
   }
   .iphone_container .btn2 {
     position: relative;
     top: -100%;
+    left: 55%;
+    font-size: 16px;
+    padding: 10px 16px;
   }
   .iphone_container .right {
     position: relative;
-    top: 32%;
+    top: 35%;
     left: 25%;
     transform: none;
   }
   .iphone_container .right h1,
   .iphone_container .right h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .iphone_container .right h1 {
-    top: 5%;
+    top: 2%;
   }
 
   .features-section .features-grid {
@@ -655,11 +666,12 @@ html {
   }
 
   .faq-question {
-    gap: 0px;
+    gap: 0;
   }
 
   .faq-left {
     margin: 0;
+    margin-left: 20px;
   }
   .faq-left .btn {
     font-size: 12px;
