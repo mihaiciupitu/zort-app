@@ -1,0 +1,660 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray: #b4bfd2;
+  --white: white;
+  --base-type: #13182b;
+  --dm-background: #11151b;
+  --blue-light: #8bb9fe;
+  --dm-outline: #black;
+  --blue-gray-10: #0e1f39;
+  --neutral-gray: #737276;
+  --button-text: #010307;
+}
+/* Navbar Container */
+.navbar {
+  background-color: var(--button-text);
+}
+
+.container {
+  margin: 0 40px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+.navwrap {
+  display: flex;
+  align-items: center;
+}
+/* Navigation Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 18px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+}
+/* Global button styling */
+.btn {
+  color: var(--button-text);
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons .btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--blue-light);
+  color: var(--button-text);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+body {
+  background-image: linear-gradient(#02070d, #02070d);
+  height: 100%;
+}
+html {
+  height: 200vh;
+}
+/* Mobile Menu Button */
+.menu-button {
+  background: none;
+  border: none;
+  display: none;
+}
+.menu-button img {
+  width: 36px;
+  height: 36px;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 1rem;
+  background: linear-gradient(#02070d, #02070d);
+  overflow: hidden;
+}
+
+/* Container to hold two columns */
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Left Column: Text and Buttons */
+.hero-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 1rem;
+  color: var(--white);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 50px;
+  margin-bottom: 5px;
+  font-size: 88px;
+  line-height: 95%;
+}
+
+.highlight {
+  color: var(--blue-light);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.hero-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background-color: var(--blue-light);
+  color: var(--button-text);
+  border-radius: 25px;
+  font-size: 22px;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--gray);
+  color: white;
+  border-radius: 25px;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+/* Reviews Section */
+.reviews {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 20px;
+}
+.review-count {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.stars img {
+  width: 12px;
+  height: 12px;
+  filter: brightness(100);
+}
+
+/* Right Column: Media */
+.hero-media {
+  flex: 1;
+  text-align: center;
+}
+
+.media-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animated Media Section */
+
+.phone-section {
+  position: relative;
+  background-color: var(--dm-background);
+  min-height: 200vh;
+}
+
+.phone-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 1;
+}
+
+.iphone_container {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1250px;
+  height: auto;
+  min-height: 80vh;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  top: 0;
+}
+.iphone_container .left {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+  width: 400px;
+  height: 200px;
+}
+.iphone_container .right {
+  color: var(--white);
+  position: absolute;
+  left: 95%;
+  top: 30%;
+  width: 400px;
+  height: 200px;
+}
+.slide0 {
+  position: absolute;
+  top: 0;
+  left: 70%;
+  transform: translateX(-50%);
+
+  width: 300px;
+  margin-top: 20px;
+  z-index: 1;
+}
+.slide {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 70%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  width: 265px;
+  margin-top: 38px;
+}
+.phone-section .btn1,
+.phone-section .btn2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease,
+    color 0.5s ease;
+  border: 2px var(--blue-gray-10) solid;
+}
+.btn1 {
+  padding: 15px 30px; /* Adjust padding for a bigger button */
+  min-width: 220px; /* Ensure consistent button size */
+  font-size: 24px; /* Increase text size */
+}
+.btn2 {
+  font-size: 24px; /* Increase text size */
+  padding: 15px 30px; /* Adjust padding for a bigger button */
+  min-width: 160px; /* Ensure consistent button size */
+}
+.iphone_container .btn1 {
+  bottom: 50%;
+}
+
+.iphone_container .btn2 {
+  bottom: 20%;
+}
+.right h1,
+.right h2 {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  display: block;
+
+  padding: 0;
+  font-size: 60px;
+}
+
+.right h1 {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+/* Features Section Styling */
+.features-section {
+  padding: 4rem 1rem;
+  background-color: var(--dm-background);
+  border-top: var(--blue-light) 1px solid;
+  border-bottom: var(--blue-light) 1px solid;
+}
+
+.features-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid layout for feature cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Styling for individual feature cards */
+.feature-card {
+  text-align: center;
+  padding: 1rem;
+  background-color: black;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styling */
+.feature-icon {
+  max-width: 80px;
+  margin-bottom: 1rem;
+}
+
+/* Title styling */
+.feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+/* Description styling */
+.feature-description {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+/* Section layout */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  min-height: 50vh;
+}
+
+/* Card styling */
+.card {
+  background-color: var(--dm-background);
+  border-radius: 8px;
+  padding: 4rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: var(--white);
+  width: 600px;
+  height: 280px;
+  position: relative;
+  margin: 20px 50px 0 0;
+  flex: 1 1 45%;
+  max-width: 640px;
+  font-size: 32px;
+}
+.card h3 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.card p {
+  position: absolute;
+  top: 28%;
+  left: 3.8%;
+  text-align: left;
+  margin-left: 8px;
+}
+
+/* Button base style */
+.btn {
+  background-color: var(--blue-light);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 16px;
+}
+
+.card .btn {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  margin-top: 100px;
+}
+/* Button hover effect */
+.btn:hover {
+  background-color: var(--white);
+  color: #000;
+  border: 1px solid var(--light-blue);
+}
+
+/* FAQ Section Styling */
+.faq-section {
+  padding: 2rem;
+  background-color: var(--dm-background);
+  color: var(--white);
+  display: flex;
+  position: relative;
+  min-height: 400px;
+  gap: 2rem;
+  justify-content: center;
+}
+.faq-left {
+  flex: 0 0 30%;
+  margin-left: 150px;
+}
+
+.faq-left span {
+  color: var(--gray);
+}
+
+.faq-section .container {
+  max-width: 800px;
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+
+  width: 600px;
+  margin: 0;
+  padding: 0;
+}
+
+/* FAQ item */
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+.faq-item p {
+  width: 200px;
+  color: var(--white);
+}
+/* FAQ question button */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: var(--white);
+  gap: 400px;
+}
+
+/* Arrow styling */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* FAQ answer (hidden by default) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* When FAQ item is active, show the answer */
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Rotate arrow when active */
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--button-text);
+  padding: 1rem 0;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.footer-logo img {
+  height: 40px; /* Adjust the logo height as needed */
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+  filter: invert(100%);
+}
+
+.social-link:hover img {
+  opacity: 0.7; /* Slight fade on hover */
+}
+.pin-spacer,
+.phone-sticky {
+  max-width: 100vw;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body,
+  html {
+    margin: 0;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .menu-button {
+    filter: invert(100%);
+    display: block;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .hero-text h1 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .hero-text p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .hero-text .primary {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .hero-text .btn-secondary {
+    font-size: 12px;
+  }
+  .reviews {
+    font-size: 12px;
+  }
+  .review-count {
+    font-size: 12px;
+  }
+  .iphone_container .slide0,
+  .iphone_container .slide1,
+  .iphone_container .slide2,
+  .iphone_container .slide3 {
+    left: 50%;
+  }
+  .iphone_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .iphone_container .left {
+    top: 92%;
+    left: 4%;
+  }
+  .iphone_container .right {
+    top: 120%;
+    left: 30%;
+  }
+  .iphone_container .right h1,
+  .iphone_container .right h2 {
+    font-size: 20px;
+  }
+  .iphone_container .right h1 {
+    top: 5%;
+  }
+
+  .features-section .features-grid {
+    display: flex;
+
+    flex-direction: column;
+  }
+  .cards-section .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cards-section .container .btn {
+    z-index: 1;
+    top: -15%;
+    left: 5%;
+    width: 160px;
+  }
+  .cards-section .container .card h3,
+  .cards-section .container .card p {
+    margin: 0;
+  }
+  .cards-section .container .card p {
+    margin-left: 4px;
+  }
+  .cards-section .btn {
+    width: 120px;
+    padding: 8px;
+    font-size: 12px;
+  }
+  .card {
+    font-size: 12px;
+    margin: 0;
+  }
+  .cards-section .card {
+    width: 200px;
+  }
+  .cards-section .container {
+    width: 200px;
+  }
+  .faq-section .container {
+    width: 200px;
+  }
+  .faq-item {
+    width: 200px;
+  }
+
+  .faq-question {
+    gap: 0px;
+  }
+
+  .faq-left {
+    margin: 0;
+  }
+  .faq-left .btn {
+    font-size: 12px;
+  }
+}
