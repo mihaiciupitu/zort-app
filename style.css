@@ -205,7 +205,7 @@ html {
   align-items: center;
   width: 100%;
   max-width: 1250px;
-  height: auto;
+  height: 100vh;
   min-height: 80vh;
   padding-top: 0;
   padding-bottom: 0;
@@ -217,7 +217,6 @@ html {
   left: 15%;
   top: 30%;
   width: 400px;
-  height: 200px;
 }
 .iphone_container .right {
   color: var(--white);
@@ -225,7 +224,6 @@ html {
   left: 95%;
   top: 30%;
   width: 400px;
-  height: 200px;
 }
 .slide0 {
   position: absolute;
@@ -583,17 +581,26 @@ html {
   .iphone_container .slide3 {
     left: 50%;
   }
-  .iphone_container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+
   .iphone_container .left {
-    top: 92%;
-    left: 4%;
+    position: relative;
+    top: 45%;
+    left: 2%;
+    transform: none;
+  }
+  .iphone_container .btn1 {
+    position: relative;
+    top: -80%;
+  }
+  .iphone_container .btn2 {
+    position: relative;
+    top: -100%;
   }
   .iphone_container .right {
-    top: 120%;
-    left: 30%;
+    position: relative;
+    top: 32%;
+    left: 25%;
+    transform: none;
   }
   .iphone_container .right h1,
   .iphone_container .right h2 {
