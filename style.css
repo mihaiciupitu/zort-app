@@ -573,13 +573,13 @@ html {
   }
   .iphone_container .slide0 {
     left: 50%;
-    width: 316px;
+    width: 256px;
   }
 
   .iphone_container .slide1,
   .iphone_container .slide2,
   .iphone_container .slide3 {
-    width: 280px;
+    width: 200px;
     height: auto;
     left: 50%;
   }
