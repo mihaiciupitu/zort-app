@@ -222,7 +222,7 @@ html {
   color: var(--white);
   position: absolute;
   left: 95%;
-  top: 30%;
+  top: 15%;
   width: 400px;
 }
 .slide0 {
@@ -256,22 +256,18 @@ html {
     color 0.5s ease;
   border: 2px var(--blue-gray-10) solid;
 }
-.btn1 {
-  padding: 15px 30px; /* Adjust padding for a bigger button */
-  min-width: 220px; /* Ensure consistent button size */
-  font-size: 24px; /* Increase text size */
+.left .btn1 {
+  padding: 15px 30px;
+  min-width: 220px;
+  font-size: 24px;
 }
-.btn2 {
-  font-size: 24px; /* Increase text size */
-  padding: 15px 30px; /* Adjust padding for a bigger button */
-  min-width: 160px; /* Ensure consistent button size */
+.left .btn2 {
+  font-size: 24px;
+  padding: 15px 30px;
+  min-width: 160px;
 }
 .iphone_container .btn1 {
   bottom: 50%;
-}
-
-.iphone_container .btn2 {
-  bottom: 20%;
 }
 .right h1,
 .right h2 {
